@@ -1,0 +1,8 @@
+@import 'partials/resets'; // Resets
+@import 'partials/variables'; // Variables
+@import 'partials/keyframes'; // Keyframes
+
+//Primary stylesheets
+@import 'partials/mobile'; // No media query (Mobile)
+@import 'partials/break1'; // Brakpoint 1: min width: 768 (Larger than Mobile)
+
