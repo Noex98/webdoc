@@ -6,12 +6,10 @@
     <title>Document</title>
     <meta name="description" content="Meta description here">
 
-    <!-- components -->
-    <script src="js/components/header.js" defer></script>
-
     <!-- javaScript & Stylesheets -->
     <link rel="stylesheet" href="stylesheets/style.css">
     <script src="js/main.js" defer></script>
+    <script src="js/quizz.js" defer></script>
 
     <!-- Other -->
     <meta charset="UTF-8">
@@ -23,9 +21,29 @@
 </head>
 
 <body>
-    <header>
-        
-    </header>
+    <div id="quizz">
+        <div class="quizz__quesWrap">
+            <p class="quesWrap__ques">Er du en del af en virksomhed?</p>
+            <div>
+                <button onclick="ques1_no()">Nej</button>
+                <button onclick="ques1_yes()">Ja</button>
+            </div>
+        </div>
+        <div class="quizz__quesWrap quess2">
+            <p class="quesWrap__ques">Vil du gerne have flere kunder i butikken?</p>
+            <div>
+                <button onclick="ques2_no()">Nej</button>
+                <button onclick="quizzEnd()">Ja</button>
+            </div>
+        </div>
+        <div class="quizz__quesWrap quess3">
+            <p class="quesWrap__ques">Vil du gerne lære mere om marketing?</p>
+            <div>
+                <button onclick="ques3_no()">Nej</button>
+                <button onclick="quizzEnd()">Ja</button>
+            </div>
+        </div>
+    </div>
     <main>
 
     </main>

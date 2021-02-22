@@ -3,6 +3,6 @@
 @import 'partials/keyframes'; // Keyframes
 
 //Primary stylesheets
-@import 'partials/mobile'; // No media query (Mobile)
-@import 'partials/break1'; // Brakpoint 1: min width: 768 (Larger than Mobile)
+@import 'partials/mobile'; // Mobile: min width: 768
+@import 'partials/laptop'; // Laptop: no media query
 
