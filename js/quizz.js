@@ -21,5 +21,14 @@ function quizzEnd() {
     document.body.style.overflowY = "auto";
 }
 
-//If scrollposition is not 0 at load, dont show the quizz
-window.pageYOffset !== 0 ? quizzEnd() : console.log("Dont show quizz");
+// this is the first time
+if (! localStorage.noFirstVisit) {
+    quizzOverlay.style.display = "flex";
+    document.body.style.overflowY = "hidden";
+    // Setting the key to escape the quizz on future visits
+    localStorage.noFirstVisit = "1";
+}
+
+console.log("Til vores undervisere:")
+console.log("Quizzen kommer ikke op igen, medmindre du ryder dit local storage, dette er et bevidst valg.");
+console.log("Skriv i console 'localStorage.clear();' og refresh siden for at åbne quizzen igen.");
