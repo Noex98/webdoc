@@ -68,10 +68,10 @@
     &__slider {
         padding:64px;
         .slider__sliderFunction {
-            height:294.53px;
-            width:800px;
+            width:60vw;
             position:relative;
             margin:32px auto;
+            overflow-x: hidden;
             .slider__sliderFunction-animate {
                 animation: sliderMove 5s infinite ease-in;
             }
@@ -85,10 +85,12 @@
                 background-size:cover;
             }
             .rightImage {
-                background:url("../media/images/graf1.svg");
                 width:100%;
                 height:100%;
-                background-size:cover;
+                img {
+                    width:100%;
+                    height:100%;
+                }
             }
             input {
                 -webkit-appearance: none;
@@ -96,25 +98,37 @@
                 top:50%;
                 left:50%;
                 transform:translate(-50%, -50%);
-                width:100%;
+                width:103%;
                 background:transparent;
                 outline:none;
+                z-index: 100;
             }
             input::-webkit-slider-thumb {
                 -webkit-appearance: none;
                 appearance: none;
-                background:rgba(0, 0, 0, 0.89);
-                width: 10px;
-                height: 294.53px;
+                background:black;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
                 cursor: pointer;
             }
             input::-moz-range-thumb {
-                background:rgba(0, 0, 0, 0.5);
-                width: 20px;
-                height:500px;
+                background:black;
+                width: 30px;
+                height:23px;
+                border-radius: 50%;
                 cursor: pointer;
             }
-            
+            #inputThumb {
+                z-index: 90;
+                position:absolute;
+                top:0;
+                left:50%;
+                width:10px;
+                transform:translateX(-50%);
+                height:100%;
+                background-color: black;
+            }
         }
         .slider__text {
             width:800px;

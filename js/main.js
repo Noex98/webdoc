@@ -7,6 +7,7 @@ const video = document.getElementById("video");
 
 //slider
 rangeSlider.oninput = function(){
+    document.getElementById("inputThumb").style.left = this.value + "%";
     leftImage.style.width = this.value + "%";
     //slider text box
     if (this.value < 50){
