@@ -1,3 +1,72 @@
 @media only screen and (max-width: 768px) {
-    
+    .main {
+        margin:0 auto;
+        &__intro {
+            padding:64px 0;
+            h1 {
+                width:80vw;
+                font-size: 2rem;
+                padding:16px;
+            }
+            .intro__wrap {
+                flex-direction: column;
+                
+                .intro__textCont {
+                    font-size:1rem;
+                    width: 80vw;
+                    text-align: center;
+                    margin:64px;
+                }
+                .intro__imgCont {
+                    width:80vw;
+                }
+                
+            }
+            .main__introText{
+                padding: 0;
+            }
+        
+        }
+        &__introText {
+            padding:64px 24px;
+        }
+        
+        .slider__sliderFunction {
+            width:90vw;
+        }
+        .slider__text{
+            width: 90vw;
+        }
+        .mediac__textContainer {
+            column-count:1;
+            padding:32px;
+        }
+        .mediac__end {
+            flex-direction: column;
+            .imgCont {
+                width:100%;
+                img {
+                    width:100%;
+                }
+            }
+            p {
+                width:95%;
+            }
+        }
+        h3{
+            font-size: 1.5rem;
+        }
+    }
+    .someCont {
+        height: 30vh;
+        a {
+            height:48px;
+            width:48px;
+            img {
+                height:48px;
+                width:48px;
+            }
+        }
+    }
 }
+

@@ -10,10 +10,18 @@
     <link rel="stylesheet" href="stylesheets/style.css">
     <script src="js/main.js" defer></script>
     <script src="js/quizz.js" defer></script>
+    <script src="js/rellax.min.js" defer></script>
 
     <!-- Other -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;500&display=swap" rel="stylesheet">
 
     <!-- favicon -->
     <link rel="icon" type="image/png" href="">
@@ -21,9 +29,11 @@
 </head>
 
 <body>
-    <div id="bezier"></div>
+    <!-- Required for using cubic bezier in js -->
+    <div id="bezier style: display:none;"></div>
+    <!-- Quizz -->
     <div id="quizz">
-        <div class="quizz__quesWrap">
+        <div class="quizz__quesWrap"> 
             <p class="quesWrap__ques">Er du en del af en virksomhed?</p>
             <div>
                 <button onclick="ques1_no()">Nej</button>
@@ -45,41 +55,68 @@
             </div>
         </div>
     </div>
+    <!-- Main content here -->
     <main class="main">
         <section class="main__intro">
-            <h1>Læg en digital marketing strategi i dag</h1>
-            <div class="intro__textCont">
-                <p>
-                    Den traditionelle markedsføring er ved at blive udskiftet med 
-                    den digitale markedsføring i denne, for at få virksomhederne 
-                    ud over stepperne. Med den digitale marketing kan du som 
-                    virksomhed sprede dit budskab til uendelig mange mennesker 
-                    via et enkelt klik eller deling på de sociale medier. Der er 
-                    mange muligheder forbundet med digital markedsføring, hvor man 
-                    kan lave en række strategier ud fra virksomhedens budget. 
-                    Samtidig med kan aktiviteten måles på de forskellige strategier 
-                    på hvert enkelte sociale medie. 
-                </p>
-            </div>
-            <div class="intro__imgCont">
-                <img src="media/images/randomimg.png" alt="">
-            </div>
+            <video playsinline autoplay muted loop class="intro__vid" src="media/videos/introVid.mp4"></video>
+            <h1 id="header">Læg en digital marketing strategi i dag</h1>
         </section>
+        <p class="main__introText">
+            Den traditionelle markedsføring er ved at blive udskiftet med 
+            den digitale markedsføring i denne, for at få virksomhederne 
+            ud over stepperne. Med den digitale marketing kan du som 
+            virksomhed sprede dit budskab til uendelig mange mennesker 
+            via et enkelt klik eller deling på de sociale medier. Der er 
+            mange muligheder forbundet med digital markedsføring, hvor man 
+            kan lave en række strategier ud fra virksomhedens budget. 
+            Samtidig med kan aktiviteten måles på de forskellige strategier 
+            på hvert enkelte sociale medie. 
+        </p>
         <section class="main__video">
-            <video controls id="video" src="media/videos/MediacFilm.mp4"></video>
+            <video controls class="rellax" data-rellax-speed="1.5" id="video" src="media/videos/MediacFilm.mp4"></video>
         </section>
-        <section class="main__slider">
-            <div class="slider__sliderFunction">
+        <section class="main__slider" id="sliderCont">
+            <h2 class="slider__header rellax" data-rellax-speed="0.8">Kom i mål med Mediac Agency</h2>
+            <div class="slider__sliderFunction rellax" data-rellax-speed="0.8">
                 <div class="leftImage"></div>
                 <input type="range" id="rangeSlider" min="0" value="50" max="100">
                 <div id="inputThumb"></div>
-                <div class="rightImage"><img src="media/images/graf1.svg" alt=""></div>
+                <img class="rightImage" src="media/images/graf1.svg" alt="">
             </div>
-            <div class="slider__text" id="sliderText"></div>
+            <div class="slider__text rellax" data-rellax-speed="0.5" id="sliderText">Hiv håndtaget</div>
+        </section>
+        <section class="main__mediac">
+            <div class="header">
+                <h3>
+                    Er din virksomhed klar til væksteventyret? <br>
+                    Vi står klar til at hjælpe
+                </h3>
+                <p class="mediac__textContainer">
+                    Når du som virksomhed beslutter dig for at skulle vælge et markedsføringsbureau. 
+                    Når du skal starte et samarbejde er det ofte vigtigt, at du på forhånd har analyseret 
+                    dine styrke og svagheder. Så du ved præcis, hvor du mangler hjælp til digital 
+                    markedsføring. Derudover er det en god idé, at lave research på de enkelte 
+                    markedsføringsbureauer. Da nøglen i et godt og langvarigt samarbejde er kommunikation 
+                    og arbejdsglæde. Så find et bureau som matcher dine værdier og målsætninger.
+
+                    Eksempelvis leder du efter et ungt team, som har styr på de sociale platforme og ved, 
+                    hvordan man rammer en bestemt målgruppe. Her vil Mediac Agency være et godt bud, de 
+                    er et ungt hold som vil tage deres tørn og tage dig som virksomhed med på en 
+                    vækstrejse. De er villig til, at gå den ekstra mil som det kræver for dine 
+                    målsætninger.
+                </p>
+                <div class="mediac__end">
+                    <p>"Det er ikke et sprint - men et marathon"</p>
+                    <div class="imgCont"><img src="media/images/gruppeBillede.png" alt=""></div>
+                </div>
+            </div>
         </section>
     </main>
-    <footer>
-    </footer>
+    <div id="someCont" class="someCont rellax" data-rellax-speed="-0.1">
+        <a target="blank" href="https://www.facebook.com/MediacAgency"><img class="someImg" src="media/images/some/face.png" alt="facebook link"></a>
+        <a target="blank" href="https://www.instagram.com/mediacagency/"><img class="someImg" src="media/images/some/insta.png" alt="instagram link"></a>
+        <a target="blank" href="https://www.mediacagency.com/"><img class="someImg" src="media/images/some/web.png" alt="website link"></a>
+    </div>
 </body>
 
 </html>

@@ -10,6 +10,7 @@
     position:absolute;
     top:0;
     left:0;
+    z-index: 1000;
     button{
         background-color:rgb(165, 165, 165);
         cursor:pointer;
@@ -32,46 +33,81 @@
 .main {
     margin:0 auto;
     &__intro {
-        height: 100vh;
-        background:url("../media/images/introImg.png");
-        background-attachment: fixed;
-        background-size: cover;
-        display:flex;
-        flex-wrap:wrap;
-        justify-content: space-around;
+        min-height:100vh;
         align-items:center ;
+        padding:64px 0;
+        display:flex;
+        overflow:hidden;
+        position: relative;
+        .intro__vid {
+            position:fixed;
+            top:0;
+            object-fit: cover;
+            width:100vw;
+            height:100%;
+            z-index:-1;
+        }
         h1 {
+            width:fit-content;
+            margin: 0 auto;
             text-align: center;
-            width:100%;
             font-size:3rem;
-        }
-        .intro__textCont {
-            width:40vw;
-            font-size:1.5rem;
-        }
-        .intro__imgCont {
-            width:40vw;
-        }
+            background:rgba(255, 255, 255, 0.637);
+            color:rgb(0, 0, 0);
+            padding:32px;
+            box-shadow: 30px 30px 30px 1px rgba(0, 0, 0, 0.747);
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            line-height: 1.2;
+            font-size: 3vw;
+            text-align: center;
+            opacity: var(--headerOpacity);
+            transform: scale(var(--headerScale));
+            position:relative;
+            top:0;
+            }
+    }
+    &__introText {
+        padding:64px 124px;
+        font-size:1.5rem;
+        background:rgba(182, 182, 182, 0.63);
+        column-width: 400px;
+        column-gap: 100px;
+
     }
     &__video {
         padding:10vh 10vw;
         display:flex;
         align-items: center;
         justify-content: center;
-        background-color: grey;
+        background-color: #292929;
+        background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+        background-attachment: fixed;
         video {
             outline:none;
             max-width:80vw;
             max-height:80vh;
+            box-shadow: 30px 30px 30px 1px rgba(0, 0, 0, 0.747);
         }
     }
     &__slider {
-        padding:64px;
+        padding:64px 0;
+        text-align: center;
+        background-color: #f2f2f2;
+        background-image: url("https://www.transparenttextures.com/patterns/light-mesh.png");
+        background-attachment: fixed;
+        .slider__header {
+            text-align: center;
+            font-size: 2rem;
+            padding:32px;
+            //background:linear-gradient(rgba(0, 0, 0, 0.233),rgba(187, 187, 187, 0));
+        }
         .slider__sliderFunction {
             width:60vw;
             position:relative;
-            margin:32px auto;
+            margin:0 auto;
             overflow-x: hidden;
+            box-shadow: 30px 30px 30px 1px rgba(0, 0, 0, 0.747);
             .slider__sliderFunction-animate {
                 animation: sliderMove 5s infinite ease-in;
             }
@@ -85,12 +121,9 @@
                 background-size:cover;
             }
             .rightImage {
+                display:block;
                 width:100%;
                 height:100%;
-                img {
-                    width:100%;
-                    height:100%;
-                }
             }
             input {
                 -webkit-appearance: none;
@@ -131,9 +164,78 @@
             }
         }
         .slider__text {
-            width:800px;
+            width:60vw;
+            background:rgba(0, 0, 0, 0.075);
             text-align: center;
-            margin:0 auto;
+            margin: 0 auto;
+            margin-top: 30px;
+            padding: 45px;
+            font-size:1.3rem;
+            box-shadow: 30px 30px 30px 1px rgba(0, 0, 0, 0.747);
+        }
+    }
+    &__mediac {
+        background-color: #292929;
+        background-image: url("https://www.transparenttextures.com/patterns/iron-grip.png");
+        background-attachment: fixed;
+        padding:auto;   
+        color:white;
+        h3 {
+            font-size:2rem;
+            text-align: center;
+            padding:32px;
+            background:linear-gradient(rgba(0, 0, 0, 0.233),rgba(187, 187, 187, 0));
+        }
+        .mediac__textContainer {
+            column-gap: 100px;
+            column-width: 150px;
+            column-count: 3;
+            padding:32px 10vw;;
+            column-fill: balance;
+        }
+        .mediac__end {
+            text-align: center;
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            p {
+                font-family: 'Caveat', cursive;
+                width:40%;
+                font-size:3rem;
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .imgCont {
+                width:40%;
+                img {
+                    width:100%;
+                }
+            }
+        }
+    }
+}
+
+.someCont {
+    opacity: 0;
+    position: fixed;
+    top:60%;
+    right:1vw;
+    display:flex;
+    flex-direction: column;
+    height:30vh;
+    justify-content: space-between;
+    transition:300ms;
+    a {
+        border-radius: 50%;;
+        width:64px;
+        height:64px;
+        text-align: center;
+        background:none;
+        box-shadow: 15px 15px 15px 1px black;
+        img {
+            width:64px;
+            height:64px;
         }
     }
 }
