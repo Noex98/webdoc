@@ -63,14 +63,36 @@ a {
   z-index: 1000;
 }
 
+#quizz video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100vw;
+  height: 100%;
+  z-index: -1;
+}
+
 #quizz button {
-  background-color: #a5a5a5;
+  background: rgba(255, 255, 255, 0.637);
+  -webkit-box-shadow: 30px 30px 30px 1px rgba(0, 0, 0, 0.747);
+          box-shadow: 30px 30px 30px 1px rgba(0, 0, 0, 0.747);
+  margin: 32px;
+  width: 200px;
+  padding: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.384);
   cursor: pointer;
   font-size: 1.5rem;
 }
 
 #quizz .quesWrap__ques {
-  padding: 32px 0;
+  padding: 32px 32px;
+  background: rgba(255, 255, 255, 0.637);
+  -webkit-box-shadow: 30px 30px 30px 1px rgba(0, 0, 0, 0.747);
+          box-shadow: 30px 30px 30px 1px rgba(0, 0, 0, 0.747);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
 }
 
 #quizz .quizz__quesWrap {
@@ -120,7 +142,6 @@ a {
   text-align: center;
   font-size: 3rem;
   background: rgba(255, 255, 255, 0.637);
-  color: black;
   padding: 32px;
   -webkit-box-shadow: 30px 30px 30px 1px rgba(0, 0, 0, 0.747);
           box-shadow: 30px 30px 30px 1px rgba(0, 0, 0, 0.747);
@@ -139,7 +160,7 @@ a {
 .main__introText {
   padding: 64px 124px;
   font-size: 1.5rem;
-  background: rgba(182, 182, 182, 0.63);
+  background: rgba(255, 255, 255, 0.74);
   -webkit-column-width: 400px;
           column-width: 400px;
   -webkit-column-gap: 100px;

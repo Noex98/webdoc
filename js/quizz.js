@@ -1,24 +1,46 @@
 
-const quizzOverlay = document.getElementById("quizz");
-const questions = document.querySelectorAll(".quizz__quesWrap");
+const quizzOverlay = document.getElementById("quizz"); //The quizz wrapper
+const questions = document.querySelectorAll(".quizz__quesWrap"); //Wrappers containing the questions
+const headline = document.getElementById("header");
 
-function ques1_no() {
-    questions.item(0).style.display = "none";
-    questions.item(2).style.display = "block";
-}
-function ques1_yes() {
-    questions.item(0).style.display = "none";
-    questions.item(1).style.display = "block";
-}
-function ques2_no() {
-    
-}
-function ques3_no() {
-    
-}
+//Ends the quizz
 function quizzEnd() {
     quizzOverlay.style.display = "none";
     document.body.style.overflowY = "auto";
+}
+
+//Called whenever an answer is submitted
+function answer(QuestionNumber, yes){
+    //Svar til: Er du en del af en virksomhed?
+    if (QuestionNumber == 1){
+        if (yes == true){
+            questions.item(0).style.display = "none";
+            questions.item(1).style.display = "block";
+        } else {
+            questions.item(0).style.display = "none";
+            questions.item(2).style.display = "block";
+        }
+    }
+    //Svar til: Vil du gerne have flere kunder i butikken?
+    else if (QuestionNumber == 2){
+        if (yes == true){
+            headline.innerText = `Digital marketing viser vejen til jeres butik`;
+            quizzEnd();
+        } else {
+            questions.item(1).style.display = "none";
+            questions.item(2).style.display = "block";
+        }
+    }
+    //Svar til: Vil du gerne lære mere om marketing?
+    else if (QuestionNumber == 3){
+        if (yes == true){
+            headline.innerText = `Digital marketing er kommet for at blive`;
+            quizzEnd();
+        } else {
+            headline.innerText = `Der er ingen vej udenom`;
+            quizzEnd();
+        }
+    }
 }
 
 // this is the first time

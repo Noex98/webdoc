@@ -3,8 +3,8 @@
 
 <head>
     <!-- SEO -->
-    <title>Document</title>
-    <meta name="description" content="Meta description here">
+    <title>Webdoc | Mediac Agency</title>
+    <meta name="description" content="Hvis andre end Kim kommer til at læse det her, så sig lige til :=)">
 
     <!-- javaScript & Stylesheets -->
     <link rel="stylesheet" href="stylesheets/style.css">
@@ -17,7 +17,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Fonts -->
-    
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
@@ -25,33 +24,33 @@
 
     <!-- favicon -->
     <link rel="icon" type="image/png" href="">
-    
 </head>
 
 <body>
-    <!-- Required for using cubic bezier in js -->
-    <div id="bezier style: display:none;"></div>
     <!-- Quizz -->
     <div id="quizz">
+        <!-- background video -->
+        <video playsinline autoplay muted loop class="intro__vid" src="media/videos/introVid.mp4"></video>
+        <!-- Question containers -->
         <div class="quizz__quesWrap"> 
             <p class="quesWrap__ques">Er du en del af en virksomhed?</p>
             <div>
-                <button onclick="ques1_no()">Nej</button>
-                <button onclick="ques1_yes()">Ja</button>
+                <button onclick="answer(1)">Nej</button>
+                <button onclick="answer(1, true)">Ja</button>
             </div>
         </div>
         <div class="quizz__quesWrap quess2">
             <p class="quesWrap__ques">Vil du gerne have flere kunder i butikken?</p>
             <div>
-                <button onclick="ques2_no()">Nej</button>
-                <button onclick="quizzEnd()">Ja</button>
+                <button onclick="answer(2)">Nej</button>
+                <button onclick="answer(2, true)">Ja</button>
             </div>
         </div>
         <div class="quizz__quesWrap quess3">
             <p class="quesWrap__ques">Vil du gerne lære mere om marketing?</p>
             <div>
-                <button onclick="ques3_no()">Nej</button>
-                <button onclick="quizzEnd()">Ja</button>
+                <button onclick="answer(3)">Nej</button>
+                <button onclick="answer(3, true)">Ja</button>
             </div>
         </div>
     </div>
